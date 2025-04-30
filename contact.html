@@ -34,16 +34,10 @@
       padding-top: 40px; /* Space for the fixed slider */
       padding: 10px;
     }
+
   </style>
 </head>
 <body>
-
-  <!-- Text Slider -->
-  <div class="text-slider-container">
-    <div class="text-slider-message" id="sliderMessage">🚀 Welcome to our website!</div>
-  </div>
-
-<br>
     <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
         <div class="text-warning"><h2 class="ms-2 fs-1" >Aura</h2></div>
         <div class="d-flex flex-row-reverse"></div>
@@ -74,28 +68,8 @@
           </ul>
         </div>
       </nav>
-  <!-- JavaScript for Slider -->
-  <script>
-    const messages = [
-      "🚀 Welcome to our website!",
-      "🎉 Enjoy our latest offers!",
-      "💬 Contact support anytime!",
-      "🔔 Subscribe for updates!"
-    ];
-
-    let current = 0;
-    const messageEl = document.getElementById("sliderMessage");
-
-    setInterval(() => {
-      current = (current + 1) % messages.length;
-      messageEl.style.opacity = 0;
-      setTimeout(() => {
-        messageEl.textContent = messages[current];
-        messageEl.style.opacity = 1;
-      }, 500);
-    }, 3000); // Change message every 3 seconds
-  </script>
-  <br>
+ 
+  
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
 <div class="elfsight-app-ede2dcef-f812-47e8-9353-c78ecba76238" data-elfsight-app-lazy></div>
 </body>
