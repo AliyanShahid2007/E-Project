@@ -3,82 +3,164 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aura Watches</title>
+    <title>Aura Watches - Technology</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-      <div class="text-warning"><h2 class="ms-3 fs-1">Aura</h2></div>
-      <div class="d-flex flex-row-reverse"></div>
-      <ul class="nav justify-content-center">
-        <li class="nav-item fs-5">
-          <a
-            class="nav-link active text-light icon-link-hover link-warning"
-            aria-current="page"
-            href="WebPage.html"
-            >Home</a
-          >
-        </li>
-
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle text-light fs-5"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Products
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="Allproducts.html">All</a>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-warning fs-1" href="WebPage.html">Aura</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="WebPage.html">Home</a>
             </li>
-            <li><a class="dropdown-item" href="sportz.html">Sportz</a></li>
-            <li><a class="dropdown-item" href="premiere.html">Premiere</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Products
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Allproducts.html">All</a></li>
+                <li><a class="dropdown-item" href="sportz.html">Sportz</a></li>
+                <li><a class="dropdown-item" href="premiere.html">Premiere</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="Technology.html">Technology</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="support.html">Support</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="locator.html">Store Locator</a>
+            </li>
           </ul>
-        </li>
-
-        <li class="nav-item fs-5">
-          <a class="nav-link text-light icon-link-hover link-warning" href="Technology.html"
-            >Technology</a
-          >
-        </li>
-        <li class="nav-item fs-5">
-          <a class="nav-link text-light icon-link-hover link-warning" href="contact.html"
-            >Contact us</a
-          >
-        </li>
-        <li class="nav-item fs-5">
-          <a class="nav-link text-light icon-link-hover link-warning" href="support.html"
-            >Support</a
-          >
-        </li>
-        <li class="nav-item fs-5">
-          <a class="nav-link text-light icon-link-hover link-warning" href="locator.html"
-            >Store Locator</a
-          >
-        </li>
-        <form class="d-flex me-2" role="search">
-          <input
-            class="form-control me-1"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-        </form>
-      </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-warning" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
     </nav>
+
+    <section class="core-tech">
+      <h2>Precision Engineering</h2>
+      <p class="lead text-muted">Discover the innovative technology behind every Aura timepiece</p>
+      
+      <div class="tech-grid">
+        <!-- Tech Feature 1 -->
+        <div class="tech-card">
+          <div class="tech-icon">
+            <img src="Images/grand-seiko-caliber-t-zero-t0-kapak.jpg" alt="Precision Movement">
+          </div>
+          <h3>Swiss Automatic Movement</h3>
+          <p>Our watches are powered by ultra-precise mechanical movements, crafted in Switzerland and accurate to ±5 seconds per day. Each movement contains over 200 meticulously assembled components.</p>
+        </div>
+        
+        <!-- Tech Feature 2 -->
+        <div class="tech-card">
+          <div class="tech-icon">
+            <img src="Images/Crystal+Material+(latest)-2.jpg" alt="Sapphire Crystal">
+          </div>
+          <h3>Scratch-Resistant Sapphire</h3>
+          <p>Featuring synthetic sapphire crystal with anti-reflective coating, our watch faces offer exceptional clarity and durability that resists scratches from daily wear.</p>
+        </div>
+        
+        <!-- Tech Feature 3 -->
+        <div class="tech-card">
+          <div class="tech-icon">
+            <img src="Images/watch-water-resistance-shower_2d5e70b7-3650-481a-8022-d5f2c55dbae9.webp" alt="Water Resistance">
+          </div>
+          <h3>200M Water Resistance</h3>
+          <p>Engineered for professional divers with reinforced seals, screw-down crowns, and corrosion-resistant 316L stainless steel cases that withstand pressures at 200 meters depth.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tech-features">
+      <div class="feature-list">
+        <h3 class="text-center mb-4">Additional Technical Specifications</h3>
+        
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-battery-full"></i>
+          </div>
+          <div class="feature-content">
+            <h4>Extended Power Reserve</h4>
+            <p>Our automatic movements feature a 72-hour power reserve, ensuring accurate timekeeping even when not worn for several days.</p>
+          </div>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="feature-content">
+            <h4>Magnetic Resistance</h4>
+            <p>Protected against magnetic fields up to 4,800 A/m, making our watches resistant to everyday magnetic interference from electronics.</p>
+          </div>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <div class="feature-content">
+            <h4>Luminescent Markers</h4>
+            <p>Super-LumiNova® coated hands and markers provide exceptional low-light visibility that lasts up to 8 hours in complete darkness.</p>
+          </div>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <div class="feature-content">
+            <h4>Ceramic Bezels</h4>
+            <p>High-tech ceramic bezels offer superior scratch resistance and maintain their color and finish indefinitely.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="careers.html">Careers</a>
+        <a href="press.html">Press</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+      </div>
+      
+      <div class="copyright">
+        &copy; 2023 Aura Watches. All rights reserved.
+      </div>
+    </footer>
   </body>
 </html>
