@@ -586,4 +586,22 @@ a:hover {
   }
 
 /* ------tech_Page End------ */
+.p1{
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+.p2{
+  width: 60%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.card-img12{
+  width: 300px;
+  box-shadow: 0 2px 8px r;
+}
+.img0{
+  width:100%;
+  height: auto;
+  display: block;
+}
   
