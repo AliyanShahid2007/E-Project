@@ -598,6 +598,7 @@ a:hover {
 .card-img12{
   width: 300px;
   box-shadow: 0 2px 8px r;
+  padding: 0;
 }
 .img0{
   width:100%;
