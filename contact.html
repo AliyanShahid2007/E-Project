@@ -1,102 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura Watches</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Aura Watches</title>
   <style>
     body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      font-family: Arial, sans-serif;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
     }
 
-    /* Top Text Slider Styles */
-    .text-slider-container {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #222;
+    header {
+      background-color: #000;
       color: #fff;
+      padding: 40px 20px;
       text-align: center;
-      padding: 2px 0;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    header p {
       font-size: 1.1rem;
+      margin-top: 10px;
+      color: #bbb;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-info {
+      margin-bottom: 40px;
+    }
+
+    .contact-info h2 {
+      margin-bottom: 10px;
+      font-size: 1.6rem;
+      color: #222;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 14px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #000;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #444;
+    }
+
+    .social {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .social a {
+      margin: 0 10px;
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .social a:hover {
+      text-decoration: underline;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
       z-index: 1000;
     }
 
-    .text-slider-message {
-      transition: opacity 0.5s ease-in-out;
-    }
-
-    /* Page Content Styles */
-    .content {
-      padding-top: 40px; /* Space for the fixed slider */
-      padding: 10px;
-    }
+   
   </style>
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (name && email && message) {
+        const popup = document.getElementById('popup');
+        popup.style.display = 'block';
+        setTimeout(() => popup.style.display = 'none', 3000);
+        event.target.reset();
+      } else {
+        alert('Please fill in all required fields.');
+      }
+    }
+  </script>
 </head>
 <body>
+  
+  <header>  
+    <h1>Contact Us</h1>
+    <p>Get in touch – we're here to help with all your watch-related inquiries.</p>
+  </header>
+  <div class="container">
+    <div class="contact-info">
+      <h2>Visit Us</h2>
+      <p>Aptech Branch #2</p>
+      <p>Orangi Town Sec #11-e Karachi,Pakistan</p>
+      <p>Mon – Fri: 10 AM – 6 PM</p>
 
-  <!-- Text Slider -->
-  <div class="text-slider-container">
-    <div class="text-slider-message" id="sliderMessage">🚀 Welcome to our website!</div>
+      <h2 style="margin-top:30px;">Call Us</h2>
+      <p>Customer Support: +92 318 156-1925</p>
+      <p>Mon – Fri: 9 AM – 5 PM </p>
+
+      <h2 style="margin-top:30px;">Email Us</h2>
+      <p><a href="mailto:info@timelesswatches.com">info@Aurawatches.com</a></p>
+      <p><a href="mailto:support@timelesswatches.com">support@Aurawatches.com</a></p>
+    </div>
+
+    <form onsubmit="handleSubmit(event)">
+      <label for="name">Full Name*</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address*</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="issue">Issue*</label>
+      <select id="issue" name="issue" required>
+        <option value="">-- Select an Issue --</option>
+        <option value="order">Order Not Received</option>
+        <option value="return">Return or Refund</option>
+        <option value="technical">Technical Problem</option>
+        <option value="warranty">Warranty Inquiry</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="message">Message*</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div id="popup" class="popup">Your Message is proceed to send!</div>
+
+   
+
+    <div class="social">
+      <p>Follow us on:</p>
+      <a href="https://www.instagram.com/">Instagram</a>
+      <a href="https://www.facebook.com/">Facebook</a>
+      <a href="https://www.pinterest.com/login/">Pinterest</a>
+    </div>
   </div>
 
-<br>
-    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-        <div class="text-warning"><h2 class="ms-2 fs-1" >Aura</h2></div>
-        <div class="d-flex flex-row-reverse"></div>
-        <ul class="nav justify-content-center">
-            
-            
-            <li class="nav-item fs-5 " >
-              <a class="nav-link active text-light  icon-link-hover link-warning"  aria-current="page" href="WebPage.html">Home</a>
-            </li>
-            <li class="nav-item fs-5"  >
-              <a class="nav-link text-light  icon-link-hover link-warning" href="#">Products</a>
-            </li>
-            <li class="nav-item fs-5">
-              <a class="nav-link text-light icon-link-hover link-warning" href="#">Technology</a>
-            </li>
-            <li class="nav-item fs-5">
-              <a class="nav-link text-light icon-link-hover link-warning" href="#">Contact us</a>
-            </li>
-            <li class="nav-item fs-5">
-              <a class="nav-link text-light icon-link-hover link-warning" href="#">About</a>
-            </li>
-            <form class="d-flex me-3" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light " type="submit">Search</button>
-              </form>
-
-            
-          </ul>
-        </div>
-      </nav>
-  <!-- JavaScript for Slider -->
-  <script>
-    const messages = [
-      "🚀 Welcome to our website!",
-      "🎉 Enjoy our latest offers!",
-      "💬 Contact support anytime!",
-      "🔔 Subscribe for updates!"
-    ];
-
-    let current = 0;
-    const messageEl = document.getElementById("sliderMessage");
-
-    setInterval(() => {
-      current = (current + 1) % messages.length;
-      messageEl.style.opacity = 0;
-      setTimeout(() => {
-        messageEl.textContent = messages[current];
-        messageEl.style.opacity = 1;
-      }, 500);
-    }, 3000); // Change message every 3 seconds
-  </script>
-  <br>
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
-<div class="elfsight-app-ede2dcef-f812-47e8-9353-c78ecba76238" data-elfsight-app-lazy></div>
 </body>
 </html>
