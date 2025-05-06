@@ -15,58 +15,61 @@
 </head>
 
 <body>
-  <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-    <div class="text-warning">
-      <h2 class="ms-3 fs-1">Aura</h2>
-    </div>
-    <div class="d-flex flex-row-reverse"></div>
-    <ul class="nav justify-content-center">
-      <li class="nav-item fs-5">
-        <a class="nav-link active text-light icon-link-hover link-warning" aria-current="page"
-          href="WebPage.html">Home</a>
-      </li>
-      <li class="nav-item fs-5"></li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle text-light fs-5" href="#" role="button" data-bs-toggle="dropdown"
-          aria-expanded="false">
-          Products
-        </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="Allproducts.html">All</a></li>
-          <li><a class="dropdown-item" href="sportz.html">Sportz</a></li>
-          <li><a class="dropdown-item" href="premiere.html">Premiere</a></li>
-          <li><a class="dropdown-item" href="couple.html">Couple</a></li>
-        </ul>
-      </li>
+ <!-- Navbar HTML -->
+<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+  <div class="text-warning logonm">
+    <img src="Images/LOGO.png" alt="Logo" class="navbar-logo">
+  </div>
 
-      <li class="nav-item fs-5">
-        <a class="nav-link text-light icon-link-hover link-warning" href="Technology.html">Technology</a>
-      </li>
-      <li class="nav-item fs-5">
-        <a class="nav-link text-light icon-link-hover link-warning" href="contact.html">Contact us</a>
-      </li>
-      <li class="nav-item fs-5">
-        <a class="nav-link text-light icon-link-hover link-warning" href="support.html">Support</a>
-      </li>
-      <li class="nav-item fs-5">
-        <a class="nav-link text-light icon-link-hover link-warning" href="locator.html">Store Locator</a>
-      </li>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-warning" type="submit">Search</button>
-      </form>
-    </ul>
-  </nav>
+  <div class="d-flex flex-row-reverse"></div>
 
-  <header class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Welcome to Aura Watches</h1>
-      <button onclick="window.location.href='products.html'">
-        Explore Products
-      </button>
+  <ul class="nav d-flex justify-content-center m-auto">
+    <li class="nav-item fs-5">
+      <a class="nav-link active text-light icon-link-hover link-warning" aria-current="page" href="WebPage.html">Home</a>
+    </li>
+    
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-light fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Products
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="Allproducts.html">All</a></li>
+        <li><a class="dropdown-item" href="sportz.html">Sportz</a></li>
+        <li><a class="dropdown-item" href="premiere.html">Premiere</a></li>
+        <li><a class="dropdown-item" href="couple.html">Couple</a></li>
+      </ul>
+    </li>
+
+    <li class="nav-item fs-5">
+      <a class="nav-link text-light icon-link-hover link-warning" href="Technology.html">Technology</a>
+    </li>
+    <li class="nav-item fs-5">
+      <a class="nav-link text-light icon-link-hover link-warning" href="contact.html">Contact us</a>
+    </li>
+    <li class="nav-item fs-5">
+      <a class="nav-link text-light icon-link-hover link-warning" href="support.html">Support</a>
+    </li>
+    <li class="nav-item fs-5">
+      <a class="nav-link text-light icon-link-hover link-warning" href="locator.html">Store Locator</a>
+    </li>
+  </ul>
+
+  <form class="d-flex" role="search">
+    <input class="form-control me-0" type="search" placeholder="Search" aria-label="Search">
+  </form>
+</nav>
+
+
+
+  <div class="video-banner">
+    <video autoplay muted loop playsinline>
+      <source src="Images/banner video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+    <div class="banner-content">
     </div>
-  </header>
+  </div>
   <br>
   <div class="Addition">
     <h1 class="d-flex justify-content-center fs-1 p1 fw-bolder">Aura Offiical Store</h1>
@@ -113,8 +116,35 @@
 
   </div>
   </div>
+  <br><br>
+ 
 
-
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Images/HOTSALE.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="Images/premium.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="Images/couple.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
 
 

@@ -4,7 +4,7 @@ body, html {
     font-family: Arial, sans-serif;
   }
 
-  .hero {
+  /* .hero {
     position: relative;
     height: 100vh;
     background: url('Images/banner.jpg') center center/cover no-repeat;
@@ -43,7 +43,7 @@ body, html {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
-  }
+  } */
   .cta-button {
     display: inline-block;
     padding: 12px 24px;
@@ -718,4 +718,55 @@ form button:hover {
 .sameasit{
   background: url('Images/banner.jpg') center center/cover no-repeat;
 }
-  
+.video-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+}
+
+.video-banner video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  object-fit: cover;
+}
+.video-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.navbar-logo {
+  height: 50px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 40px;
+  }
+}
+
+.logonm {
+  padding-left: 15px;
+}
