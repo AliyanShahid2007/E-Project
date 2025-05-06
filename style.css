@@ -605,4 +605,117 @@ a:hover {
   height: auto;
   display: block;
 }
+.specialcontact {
+  background: url('Images/banner.jpg') center center/cover no-repeat;
+ 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #bbb;
+}
+
+.container-custom {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info {
+  margin-bottom: 40px;
+}
+
+.contact-info h2 {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  color: #222;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  color: #555;
+}
+
+form label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+form input, form textarea, form select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 14px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #444;
+}
+
+.social {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.social a {
+  margin: 0 10px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.social a:hover {
+  text-decoration: underline;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+.sameasit{
+  background: url('Images/banner.jpg') center center/cover no-repeat;
+}
   

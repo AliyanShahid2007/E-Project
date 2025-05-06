@@ -17,7 +17,7 @@
     ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="specialcontact">
     <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
       <div class="text-warning"><h2 class="ms-3 fs-1">Aura</h2></div>
       <div class="d-flex flex-row-reverse"></div>
@@ -47,6 +47,7 @@
             </li>
             <li><a class="dropdown-item" href="sportz.html">Sportz</a></li>
             <li><a class="dropdown-item" href="premiere.html">Premiere</a></li>
+            <li><a class="dropdown-item" href="couple.html">Couple</a></li>
           </ul>
         </li>
         <li class="nav-item fs-5">
@@ -83,8 +84,80 @@
         </form>
       </ul>
     </nav>
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
-    <div class="elfsight-app-ede2dcef-f812-47e8-9353-c78ecba76238 text-bg-light text-light" data-elfsight-app-lazy></div>
+    
+  <!-- Contact Header -->
+  <header>
+    <h1>Contact Us</h1>
+    <p>Get in touch – we're here to help with all your watch-related inquiries.</p>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container-custom">
+    <div class="contact-info">
+      <h2>Visit Us</h2>
+      <p>Aptech Branch #2</p>
+      <p>Orangi Town Sec #11-e Karachi, Pakistan</p>
+      <p>Mon – Fri: 10 AM – 6 PM</p>
+
+      <h2 style="margin-top:30px;">Call Us</h2>
+      <p>Customer Support: +92 318 156-1925</p>
+      <p>Mon – Fri: 9 AM – 5 PM</p>
+
+      <h2 style="margin-top:30px;">Email Us</h2>
+      <p><a href="mailto:info@aurawatches.com">info@aurawatches.com</a></p>
+      <p><a href="mailto:support@aurawatches.com">support@aurawatches.com</a></p>
+    </div>
+
+    <form onsubmit="handleSubmit(event)">
+      <label for="name">Full Name*</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address*</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="issue">Issue*</label>
+      <select id="issue" name="issue" required>
+        <option value="">-- Select an Issue --</option>
+        <option value="order">Order Not Received</option>
+        <option value="return">Return or Refund</option>
+        <option value="technical">Technical Problem</option>
+        <option value="warranty">Warranty Inquiry</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="message">Message*</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div id="popup" class="popup">Your message is being sent!</div>
+
+    <div class="social">
+      <p>Follow us on:</p>
+      <a href="https://www.instagram.com/">Instagram</a>
+      <a href="https://www.facebook.com/">Facebook</a>
+      <a href="https://www.pinterest.com/login/">Pinterest</a>
+    </div>
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (name && email && message) {
+        const popup = document.getElementById('popup');
+        popup.style.display = 'block';
+        setTimeout(() => popup.style.display = 'none', 3000);
+        event.target.reset();
+      } else {
+        alert('Please fill in all required fields.');
+      }
+    }
+  </script>
   </body>
 </html>
   
