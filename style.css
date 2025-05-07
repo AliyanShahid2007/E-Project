@@ -770,3 +770,283 @@ form button:hover {
 .logonm {
   padding-left: 15px;
 }
+/* Base Animations */
+.fade-in-up,
+.zoom-in,
+.slide-in-left {
+  opacity: 0;
+  transform: translateY(20px);
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.fade-in-up {
+  animation-name: fadeUp;
+}
+
+.fade-in-delay {
+  animation-name: fadeUp;
+  animation-delay: 0.3s;
+}
+
+.zoom-in {
+  animation-name: zoomIn;
+}
+
+.zoom-in.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.zoom-in.delay-2 {
+  animation-delay: 0.6s;
+}
+
+.fade-in-up.delay-3 {
+  animation-delay: 0.9s;
+}
+
+.slide-in-left {
+  transform: translateX(-30px);
+  animation-name: slideInLeft;
+}
+
+.slide-in-left.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.slide-in-left.delay-2 {
+  animation-delay: 0.6s;
+}
+
+.slide-in-left.delay-3 {
+  animation-delay: 0.9s;
+}
+
+/* Keyframes */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* === Animation Base Classes === */
+.fade-in-up,
+.zoom-in,
+.slide-in-left {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+/* === Animation Delays === */
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+
+/* === Specific Animations === */
+.fade-in-up {
+  animation-name: fadeUp;
+  transform: translateY(20px);
+}
+
+.zoom-in {
+  animation-name: zoomIn;
+  transform: scale(0.95);
+}
+
+.slide-in-left {
+  animation-name: slideLeft;
+  transform: translateX(-30px);
+}
+
+/* === Keyframes === */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Animation Classes */
+.fade-in-up,
+.zoom-in,
+.slide-in-left {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+/* Delay Classes */
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+
+/* Specific Animations */
+.fade-in-up {
+  animation-name: fadeUp;
+  transform: translateY(20px);
+}
+
+.zoom-in {
+  animation-name: zoomIn;
+  transform: scale(0.95);
+}
+
+.slide-in-left {
+  animation-name: slideInLeft;
+  transform: translateX(-30px);
+}
+
+/* Keyframes */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Basic fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Zoom on scroll */
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Zoom on hover */
+.single-product:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  z-index: 2;
+}
+
+/* Slide in left */
+@keyframes slideInLeft {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Slide in right */
+@keyframes slideInRight {
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Apply fade-in to banner */
+.video-banner {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Overlay fade effect */
+.video-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: fadeIn 2s ease-in-out;
+  z-index: 1;
+}
+
+/* Text animation inside banner */
+.banner-content h1,
+.banner-content a {
+  animation: slideInLeft 1s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+/* Section title animation */
+.Addition h1, .Addition p,
+h1.d-flex.justify-content-center.mt-0 {
+  animation: fadeIn 1.5s ease-in;
+}
+
+/* Cards container animation */
+.card-img12 {
+  animation: zoomIn 1.2s ease-in-out;
+}
+
+/* Carousel fade in */
+#carouselExampleIndicators {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animate products on scroll (basic simulation) */
+.single-product {
+  animation: zoomIn 0.8s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Optional: smooth appearance on page load */
+body {
+  overflow-x: hidden;
+}
+.video-banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  color: white;
+}
+
