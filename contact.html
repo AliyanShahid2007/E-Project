@@ -73,7 +73,7 @@
 <!-- Main Container -->
 <div class="container-custom fade-in-up delay-1">
   <div class="contact-info slide-in-left">
-    <h2>Visit Us</h2>
+    <!-- <h2>Visit Us</h2>
     <p>Aptech Branch #2</p>
     <p>Orangi Town Sec #11-e Karachi, Pakistan</p>
     <p>Mon – Fri: 10 AM – 6 PM</p>
@@ -85,14 +85,14 @@
     <h2 style="margin-top:30px;">Email Us</h2>
     <p><a href="mailto:info@aurawatches.com">info@aurawatches.com</a></p>
     <p><a href="mailto:support@aurawatches.com">support@aurawatches.com</a></p>
-  </div>
+  </div> -->
 
   <form onsubmit="handleSubmit(event)" class="zoom-in delay-2">
     <label for="name">Full Name*</label>
-    <input type="text" id="name" name="name" required />
+    <input type="text" id="name" name="name" required  placeholder="Enter Your Full Name"/>
 
     <label for="email">Email Address*</label>
-    <input type="email" id="email" name="email" required />
+    <input type="email" id="email" name="email" required  placeholder="Enter Your Email Address"/>
 
     <label for="issue">Issue*</label>
     <select id="issue" name="issue" required>
@@ -104,8 +104,8 @@
       <option value="other">Other</option>
     </select>
 
-    <label for="message">Message*</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
+    <label for="message">Comment*</label>
+    <textarea id="message" name="message" rows="5" required placeholder="Comment"></textarea>
 
     <button type="submit">Send Message</button>
   </form>
