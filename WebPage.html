@@ -16,7 +16,7 @@
 
 <body>
  <!-- Navbar HTML -->
- <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+ <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body sticky-top" data-bs-theme="dark">
   <div class="container-fluid">
     <!-- Brand/logo -->
     <a class="navbar-brand text-warning" href="WebPage.html">
@@ -71,20 +71,23 @@
 
 
 
-  <div class="video-banner">
-    <video autoplay muted loop playsinline>
-      <source src="Images/banner video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="video-overlay"></div>
-    <div class="banner-content">
-      <h1 class="fs-1 fw-bold">Welcome to Aura Watches</h1>
-      <br>
-      <a href="products.html">
-        <div class="btn" id="Aliyanbtn1">Explore Products</div>
-      </a>     
-    </div>
+<div class="video-banner position-relative w-100 vh-100 overflow-hidden">
+  <video class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
+    <source src="Images/banner video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="video-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+
+  <div class="banner-content position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+    <h1 class="fs-1 fw-bold">Welcome to Aura Watches</h1>
+    <br>
+    <a href="products.html">
+      <div class="btn btn-light fw-bold" id="Aliyanbtn1">Explore Products</div>
+    </a>
   </div>
+</div>
+
   <br>
   <div class="Addition">
     <h1 class="d-flex justify-content-center fs-1 p1 fw-bolder">Aura Offiical Store</h1>
