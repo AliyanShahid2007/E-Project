@@ -1,51 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aura Watches</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Navbar HTML -->
-    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-      <div class="text-warning logonm">
-        <a href="WebPage.html">
-          <img src="Images/LOGO2.png" alt="Logo" class="navbar-logo" />
-        </a>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<!-- Navbar HTML -->
+ <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body sticky-top" data-bs-theme="dark">
+  <div class="container-fluid">
+    <!-- Brand/logo -->
+    <a class="navbar-brand text-warning" href="WebPage.html">
+      <img src="Images/LOGO2.png" alt="Logo" class="navbar-logo" style="height: 40px;">
+    </a>
 
-      <div class="d-flex flex-row-reverse"></div>
+    <!-- Toggler button for mobile view -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <ul class="nav d-flex justify-content-center m-auto">
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <!-- Nav links -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
         <li class="nav-item fs-5">
-          <a
-            class="nav-link active text-light icon-link-hover link-warning"
-            aria-current="page"
-            href="WebPage.html"
-            >Home</a
-          >
+          <a class="nav-link active text-light icon-link-hover link-warning" href="WebPage.html">Home</a>
         </li>
-
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle text-light fs-5"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
+        <li class="nav-item dropdown fs-5">
+          <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Products
           </a>
           <ul class="dropdown-menu">
@@ -55,146 +38,148 @@
             <li><a class="dropdown-item" href="couple.html">Couple</a></li>
           </ul>
         </li>
-
         <li class="nav-item fs-5">
-          <a
-            class="nav-link text-light icon-link-hover link-warning"
-            href="Technology.html"
-            >Technology</a
-          >
+          <a class="nav-link text-light icon-link-hover link-warning" href="Technology.html">Technology</a>
         </li>
         <li class="nav-item fs-5">
-          <a
-            class="nav-link text-light icon-link-hover link-warning"
-            href="contact.html"
-            >Contact us</a
-          >
+          <a class="nav-link text-light icon-link-hover link-warning" href="contact.html">Contact us</a>
         </li>
         <li class="nav-item fs-5">
-          <a
-            class="nav-link text-light icon-link-hover link-warning"
-            href="support.html"
-            >Support</a
-          >
+          <a class="nav-link text-light icon-link-hover link-warning" href="support.html">Support</a>
         </li>
         <li class="nav-item fs-5">
-          <a
-            class="nav-link text-light icon-link-hover link-warning"
-            href="locator.html"
-            >Store Locator</a
-          >
+          <a class="nav-link text-light icon-link-hover link-warning" href="locator.html">Store Locator</a>
         </li>
       </ul>
 
+      <!-- Search form -->
       <form class="d-flex" role="search">
-        <input
-          class="form-control me-0"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
       </form>
-    </nav>
+    </div>
+  </div>
+</nav>
 
-    <!-- ---------------------------------------------
------------------addtocart-------------------
---------------------------------------------- -->
-<header class="fade-in-up margin-top-10px">
-  <h1 class="cartheading">Add to cart</h1>
+<body class="bg-dark bg-text-dark text-body-dark">
 
-    <form onsubmit="handleSubmit(event)" class="cart row g-3 needs-validation zoom-in delay-2">
-      <div class="col-md-4">
-        <label for="validationCustom01" class="form-label">First name</label>
-        <input
-          type="text"
-          class="form-control"
-          id="validationCustom01"
-          required
-          placeholder="Enter First your name"
-        />
-        <div class="valid-feedback">Looks good!</div>
-      </div>
-
-      <div class="col-md-4">
-        <label for="validationCustom02" class="form-label">Last name</label>
-        <input
-          type="text"
-          class="form-control"
-          id="validationCustom02"
-          placeholder="Enter Last your name"
-          required
-        />
-        <div class="valid-feedback">Looks good!</div>
-      </div>
-
-      <div class="col-md-4">
-        <label for="validationCustomUsername" class="form-label"
-          >Email address</label
-        >
-        <div class="input-group has-validation">
-          <span class="input-group-text" id="inputGroupPrepend">@</span>
-          <input
-            type="text"
-            class="form-control"
-            id="validationCustomUsername"
-            aria-describedby="inputGroupPrepend"
-            placeholder="Enter your email"
-            required
-          />
-          <div class="invalid-feedback">Please choose a username.</div>
+<div class="container my-5">
+  <div class="card shadow p-4">
+    <h3 class="mb-4 text-center">Order Confirmation</h3>
+    <form id="orderForm" novalidate>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <label for="firstName" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="firstName" required>
+          <div class="invalid-feedback">First name is required.</div>
+        </div>
+        <div class="col-md-4">
+          <label for="middleName" class="form-label">Middle Name</label>
+          <input type="text" class="form-control" id="middleName">
+          <div class="invalid-feedback">Middle name is required.</div>
+        </div>
+        <div class="col-md-4">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lastName" required>
+          <div class="invalid-feedback">Last name is required.</div>
+        </div>
+        <div class="col-md-6">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="phone" required pattern="^\d{10,15}$">
+          <div class="invalid-feedback">Enter a valid phone number.</div>
+        </div>
+        <div class="col-md-3">
+          <label for="state" class="form-label">State</label>
+          <select class="form-select" id="state" required>
+            <option value="">Select State</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Sindh">Sindh</option>
+            <option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option>
+            <option value="Balochistan">Balochistan</option>
+            <option value="Islamabad">Islamabad</option>
+            <option value="Gilgit-Baltistan">Gilgit-Baltistan</option>
+            <option value="Azad Kashmir">Azad Kashmir</option>
+          </select>
+          <div class="invalid-feedback">Please select a state.</div>
+        </div>
+        <div class="col-md-3">
+          <label for="city" class="form-label">City</label>
+          <select class="form-select" id="city" required>
+            <option value="">Select City</option>
+          </select>
+          <div class="invalid-feedback">Please select a city.</div>
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-primary mt-3">
+            Confirm Order
+          </button>
         </div>
       </div>
+    </form>
+  </div>
+</div>
 
-      <!-- <div class="col-md-6">
-        <label for="validationCustom03" class="form-label">City</label>
-        <input
-          type="text"
-          class="form-control"
-          id="validationCustom03"
-          required
-        />
-        <div class="invalid-feedback">Please provide a valid city.</div>
-      </div> -->
-
-      <div class="col-md-3">
-        <label for="validationCustom04" class="form-label">State</label>
-        <select class="form-select" id="validationCustom04" required>
-          <option selected disabled value="">Choose...</option>
-          <option>Karachi</option>
-          <option>Lahore</option>
-          <option>Islamabad</option>
-          <option>Peshawar</option>
-          <option>Hyderabad</option>
-        </select>
-        <div class="invalid-feedback">Please select a valid state.</div>
+<!-- Modal -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+      <div class="modal-header border-0">
+        <h5 class="modal-title w-100" id="orderModalLabel">Thank You!</h5>
       </div>
-
-      <div class="col-md-3">
-        <label for="validationCustom05" class="form-label">Zip</label>
-        <input
-          type="text"
-          class="form-control"
-          id="validationCustom05"
-          required
-        />
-        <div class="invalid-feedback">Please provide a valid zip.</div>
+      <div class="modal-body">
+        <p class="fs-5">Thanks for your order 🎉</p>
       </div>
-
-      <div class="col-12">
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            value=""
-            id="invalidCheck"
-            required
-          />
-          <label class="form-check-label" for="invalidCheck">
-            Agree to terms and conditions
-          </label>
-          <div class="valid-feedback">You must agree before submitting.</div>
-        </div>
+      <div class="modal-footer border-0 justify-content-center">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
       </div>
+    </div>
+  </div>
+</div>
 
-  </body>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- City Logic + Form Validation -->
+<script>
+const cities = {
+  "Punjab": ["Lahore", "Faisalabad", "Multan", "Rawalpindi", "Gujranwala"],
+  "Sindh": ["Karachi", "Hyderabad", "Sukkur", "Larkana", "Mirpur Khas"],
+  "Khyber Pakhtunkhwa": ["Peshawar", "Abbottabad", "Swat", "Mardan", "Kohat"],
+  "Balochistan": ["Quetta", "Gwadar", "Khuzdar", "Turbat", "Zhob"],
+  "Islamabad": ["Islamabad"],
+  "Gilgit-Baltistan": ["Gilgit", "Skardu", "Hunza"],
+  "Azad Kashmir": ["Muzaffarabad", "Mirpur", "Rawalakot"]
+};
+
+document.getElementById("state").addEventListener("change", function () {
+  const selectedState = this.value;
+  const citySelect = document.getElementById("city");
+  citySelect.innerHTML = '<option value="">Select City</option>';
+  
+  if (cities[selectedState]) {
+    cities[selectedState].forEach(city => {
+      const option = document.createElement("option");
+      option.value = city;
+      option.textContent = city;
+      citySelect.appendChild(option);
+    });
+  }
+});
+
+const orderForm = document.getElementById('orderForm');
+
+orderForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  orderForm.classList.add('was-validated');
+
+  if (orderForm.checkValidity()) {
+    const orderModal = new bootstrap.Modal(document.getElementById('orderModal'));
+    orderModal.show();
+    orderForm.reset();
+    orderForm.classList.remove('was-validated');
+    document.getElementById("city").innerHTML = '<option value="">Select City</option>';
+  }
+});
+</script>
+  
+</body>
 </html>
