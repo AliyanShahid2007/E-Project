@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aura Watches</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar HTML -->
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+      <div class="text-warning logonm">
+        <a href="WebPage.html">
+          <img src="Images/LOGO2.png" alt="Logo" class="navbar-logo" />
+        </a>
+      </div>
+
+      <div class="d-flex flex-row-reverse"></div>
+
+      <ul class="nav d-flex justify-content-center m-auto">
+        <li class="nav-item fs-5">
+          <a
+            class="nav-link active text-light icon-link-hover link-warning"
+            aria-current="page"
+            href="WebPage.html"
+            >Home</a
+          >
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle text-light fs-5"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Products
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Allproducts.html">All</a></li>
+            <li><a class="dropdown-item" href="sportz.html">Sportz</a></li>
+            <li><a class="dropdown-item" href="premiere.html">Premiere</a></li>
+            <li><a class="dropdown-item" href="couple.html">Couple</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item fs-5">
+          <a
+            class="nav-link text-light icon-link-hover link-warning"
+            href="Technology.html"
+            >Technology</a
+          >
+        </li>
+        <li class="nav-item fs-5">
+          <a
+            class="nav-link text-light icon-link-hover link-warning"
+            href="contact.html"
+            >Contact us</a
+          >
+        </li>
+        <li class="nav-item fs-5">
+          <a
+            class="nav-link text-light icon-link-hover link-warning"
+            href="support.html"
+            >Support</a
+          >
+        </li>
+        <li class="nav-item fs-5">
+          <a
+            class="nav-link text-light icon-link-hover link-warning"
+            href="locator.html"
+            >Store Locator</a
+          >
+        </li>
+      </ul>
+
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-0"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+      </form>
+    </nav>
+
+    <!-- ---------------------------------------------
+-----------------addtocart-------------------
+--------------------------------------------- -->
+<header class="fade-in-up margin-top-10px">
+  <h1 class="cartheading">Add to cart</h1>
+
+    <form onsubmit="handleSubmit(event)" class="cart row g-3 needs-validation zoom-in delay-2">
+      <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">First name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationCustom01"
+          required
+          placeholder="Enter First your name"
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">Last name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationCustom02"
+          placeholder="Enter Last your name"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <div class="col-md-4">
+        <label for="validationCustomUsername" class="form-label"
+          >Email address</label
+        >
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+          <input
+            type="text"
+            class="form-control"
+            id="validationCustomUsername"
+            aria-describedby="inputGroupPrepend"
+            placeholder="Enter your email"
+            required
+          />
+          <div class="invalid-feedback">Please choose a username.</div>
+        </div>
+      </div>
+
+      <!-- <div class="col-md-6">
+        <label for="validationCustom03" class="form-label">City</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationCustom03"
+          required
+        />
+        <div class="invalid-feedback">Please provide a valid city.</div>
+      </div> -->
+
+      <div class="col-md-3">
+        <label for="validationCustom04" class="form-label">State</label>
+        <select class="form-select" id="validationCustom04" required>
+          <option selected disabled value="">Choose...</option>
+          <option>Karachi</option>
+          <option>Lahore</option>
+          <option>Islamabad</option>
+          <option>Peshawar</option>
+          <option>Hyderabad</option>
+        </select>
+        <div class="invalid-feedback">Please select a valid state.</div>
+      </div>
+
+      <div class="col-md-3">
+        <label for="validationCustom05" class="form-label">Zip</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationCustom05"
+          required
+        />
+        <div class="invalid-feedback">Please provide a valid zip.</div>
+      </div>
+
+      <div class="col-12">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="invalidCheck"
+            required
+          />
+          <label class="form-check-label" for="invalidCheck">
+            Agree to terms and conditions
+          </label>
+          <div class="valid-feedback">You must agree before submitting.</div>
+        </div>
+      </div>
+
+  </body>
+</html>
