@@ -1276,3 +1276,12 @@ footer {
       border: none;
       filter: brightness(0.8);
     }
+    
+    .search-input {
+      display: none;
+      transition: all 0.3s ease;
+    }
+
+    .search-input.show {
+      display: inline-block;
+    }
