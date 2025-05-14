@@ -17,6 +17,7 @@
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body class="sameasit">
@@ -68,11 +69,23 @@
       </ul>
 
       <!-- Search form -->
-      <form class="d-flex" role="search">
-        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-      </form>
+         <div class="d-flex align-items-center gap-2">
+    <i id="searchIcon" class="bi bi-search fs-4" role="button" style="cursor: pointer;"></i>
+    <input type="text" id="searchInput" class="form-control search-input" placeholder="Search...">
+  </div>
     </div>
   </div>
+   <script>
+    const searchIcon = document.getElementById('searchIcon');
+    const searchInput = document.getElementById('searchInput');
+
+    searchIcon.addEventListener('click', () => {
+      searchInput.classList.toggle('show');
+      if (searchInput.classList.contains('show')) {
+        searchInput.focus();
+      }
+    });
+  </script>
 </nav>
 <section class="core-tech fade-in-up">
   <h2>Precision Engineering</h2>

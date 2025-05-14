@@ -67,11 +67,23 @@
       </ul>
 
       <!-- Search form -->
-      <form class="d-flex" role="search">
-        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-      </form>
+        <div class="d-flex align-items-center gap-2">
+    <i id="searchIcon" class="bi bi-search fs-4" role="button" style="cursor: pointer;"></i>
+    <input type="text" id="searchInput" class="form-control search-input" placeholder="Search...">
+  </div>
     </div>
   </div>
+   <script>
+    const searchIcon = document.getElementById('searchIcon');
+    const searchInput = document.getElementById('searchInput');
+
+    searchIcon.addEventListener('click', () => {
+      searchInput.classList.toggle('show');
+      if (searchInput.classList.contains('show')) {
+        searchInput.focus();
+      }
+    });
+  </script>
 </nav>
     
 <div class="container py-5 text-dark fade-in-up">

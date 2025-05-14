@@ -76,6 +76,17 @@
   </div>
     </div>
   </div>
+   <script>
+    const searchIcon = document.getElementById('searchIcon');
+    const searchInput = document.getElementById('searchInput');
+
+    searchIcon.addEventListener('click', () => {
+      searchInput.classList.toggle('show');
+      if (searchInput.classList.contains('show')) {
+        searchInput.focus();
+      }
+    });
+  </script>
 </nav>
 
 
@@ -360,17 +371,7 @@
   </div>
 </footer>
 
-  <script>
-    const searchIcon = document.getElementById('searchIcon');
-    const searchInput = document.getElementById('searchInput');
-
-    searchIcon.addEventListener('click', () => {
-      searchInput.classList.toggle('show');
-      if (searchInput.classList.contains('show')) {
-        searchInput.focus();
-      }
-    });
-  </script>
+ 
 </body>
 
 </html>
