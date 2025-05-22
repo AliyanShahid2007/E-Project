@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aura Watches- Support</title>
+    <link rel="shortcut icon" href="Images/LOGO2.png" type="image/x-icon">
   <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -91,26 +92,111 @@
   <div class="row g-4">
     <div class="col-md-6 slide-in-left">
       <div class="contact-form">
-        <form>
+        <form id="issueForm">
           <div class="mb-3">
             <label for="name" class="form-label">Your Name</label>
-            <input type="text" class="form-control" id="name"  />
+            <input type="text" class="form-control" id="name" />
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email"  />
+            <input type="email" class="form-control" id="email" />
           </div>
           <div class="mb-3">
             <label for="product" class="form-label">Product Name</label>
-            <input type="text" class="form-control" id="product"  />
+            <input type="text" class="form-control" id="product" />
           </div>
           <div class="mb-3">
             <label for="issue" class="form-label">Describe the Issue</label>
             <textarea class="form-control" id="issue" rows="4"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Submit Issue</button>
+          <button type="submit" class="btn btn-warning">Submit Issue</button>
         </form>
+        
+        <div id="popup" style="display: none; color: green; margin-top: 20px;"></div>
+        
+        <script>
+          document.getElementById("issueForm").addEventListener("submit", handleSubmit);
+        
+          function handleSubmit(event) {
+            event.preventDefault(); // Prevent form submission
+        
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const product = document.getElementById('product');
+            const issue = document.getElementById('issue');
+            const popup = document.getElementById('popup');
+        
+            // Remove previous errors
+            removeError(name);
+            removeError(email);
+            removeError(product);
+            removeError(issue);
+            popup.style.display = 'none';
+        
+            let isValid = true;
+        
+            // Name validation
+            if (name.value.trim() === '') {
+              showError(name, 'Enter Your Name');
+              isValid = false;
+            }
+        
+            // Email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email.value.trim() === '' || !emailPattern.test(email.value.trim())) {
+              showError(email, 'Enter Your Valid Email Address');
+              isValid = false;
+            }
+        
+            // Product Name validation
+            if (product.value.trim() === '') {
+              showError(product, 'Enter Your Product Name');
+              isValid = false;
+            }
+        
+            // Issue Description validation
+            if (issue.value.trim() === '') {
+              showError(issue, 'Describe the Issue');
+              isValid = false;
+            }
+        
+            // If valid, show popup after 2 seconds and clear form data
+            if (isValid) {
+              setTimeout(() => {
+                popup.style.color = 'green';
+                popup.style.display = 'block';
+                popup.textContent = 'Your issue has been submitted!';
+        
+                // Clear the form data
+                name.value = '';
+                email.value = '';
+                product.value = '';
+                issue.value = '';
+              }, 1000);
+            }
+          }
+        
+          function showError(input, message) {
+            let error = document.createElement('div');
+            error.className = 'error-text';
+            error.style.color = 'red';
+            error.style.fontSize = '14px';
+            error.style.marginTop = '5px';
+            error.textContent = message;
+            input.parentNode.insertBefore(error, input.nextSibling);
+          }
+        
+          function removeError(input) {
+            const next = input.nextSibling;
+            if (next && next.className === 'error-text') {
+              next.remove();
+            }
+          }
+        </script>
+        
+        
       </div>
+      
     </div>
 
     <div class="col-md-6 zoom-in delay-1">
@@ -183,8 +269,8 @@
       <!-- Contact -->
       <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 animate__animated animate__fadeInRight">
         <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
-        <p><i class="fas fa-envelope me-3"></i> support@aurawatches.com</p>
-        <p><i class="fas fa-phone me-3"></i> +1 234 567 8900</p>
+        <p><i class="fas fa-envelope me-3"></i><a href="mailto:support@aurawatches.com">support@aurawatches.com</a></p>
+        <p><i class="fas fa-phone me-3"></i>  <a href="tel:+1 234 567 8900">+1 234 567 8900 </a></p>
         <p><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></p>
         <p><a href="support.html" class="text-white text-decoration-none">Support</a></p>
       </div>

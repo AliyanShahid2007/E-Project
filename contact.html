@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aura Watches- Contact</title>
+    <link rel="shortcut icon" href="Images/LOGO2.png" type="image/x-icon">
    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -108,7 +110,7 @@
     <label for="message">Comment*</label>
     <textarea id="message" name="message" rows="5"  placeholder="Comment"></textarea>
 
-    <button type="submit">Send Message</button>
+    <button class="contact-btn btn btn-warning" type="submit">Send Message</button>
   </form>
 
   <div id="popup" class="popup fade-in-up delay-3">Your message is being sent!</div>
@@ -140,7 +142,7 @@
     // Full Name validation (at least 2 words)
     const nameValue = name.value.trim();
     if (nameValue.split(' ').filter(w => w.length > 0).length < 2) {
-      showError(name, 'Enter Your Valid Full Name');
+      showError(name, 'Enter Your Full name');
       isValid = false;
     }
 
@@ -155,15 +157,22 @@
     // Comment validation (at least 5 characters)
     const messageValue = message.value.trim();
     if (messageValue.length < 5) {
-      showError(message, 'Enter Your Valid Comment');
+      showError(message, 'Enter Your Comment');
       isValid = false;
     }
 
-    // If valid, show popup
+    // If valid, show popup after 2 seconds and clear the form
     if (isValid) {
-      popup.style.color = 'green';
-      popup.style.display = 'block';
-      popup.textContent = 'Your message is being sent!';
+      setTimeout(() => {
+        popup.style.color = 'green';
+        popup.style.display = 'block';
+        popup.textContent = 'Your message is being sent!';
+        popup.style.color = 'White';
+        // Clear the form data
+        name.value = '';
+        email.value = '';
+        message.value = '';
+      }, 1000); 
     }
   }
 
@@ -218,8 +227,8 @@
       <!-- Contact -->
       <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 animate__animated animate__fadeInRight">
         <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
-        <p><i class="fas fa-envelope me-3"></i> support@aurawatches.com</p>
-        <p><i class="fas fa-phone me-3"></i> +1 234 567 8900</p>
+        <p><i class="fas fa-envelope me-3"></i><a href="mailto:support@aurawatches.com">support@aurawatches.com</a></p>
+        <p><i class="fas fa-phone me-3"></i>  <a href="tel:+1 234 567 8900">+1 234 567 8900 </a></p>
         <p><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></p>
         <p><a href="support.html" class="text-white text-decoration-none">Support</a></p>
       </div>
